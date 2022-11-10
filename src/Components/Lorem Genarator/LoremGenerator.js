@@ -12,10 +12,10 @@ export default function LoremGenerator() {
     let number = Number(count)
     
     // if(number <= 0){
-    //   console.log("first")
-    //    number = 1
+    //   console.log(number = 1)
     // }
     const texts = text.slice(0, number)
+    console.log(texts)
     setText(texts)
   }
 

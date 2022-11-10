@@ -51,7 +51,7 @@ export default function Reviews() {
                 <p>{text}</p>
                 <div className='flex justify-center items-center mt-2'>
                     <AiOutlineLeft onClick={prevParson} />
-                    <button onClick={rendomUser} className='px-5 py-1 rounded-lg text-white mx-5 bg-purple-400 '>Random</button>
+                    <button onClick={rendomUser} className='px-5 py-1 outline-none rounded-lg text-white mx-5 bg-purple-400 '>Random</button>
                     <AiOutlineRight onClick={nextParson} />
                 </div>
             </div>

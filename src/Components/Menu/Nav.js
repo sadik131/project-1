@@ -7,7 +7,7 @@ export default function Nav({filter , allCategory}) {
     return (
     <div className='justify-center flex'>
       {allCategory.map((item ,index) =>{
-        return <button className='p-3 text-yellow-700 hover:text-yellow-600 ' key={index} onClick={() =>filter(item)}>{item}</button>
+        return <button className='p-3 text-yellow-700 outline-none hover:text-yellow-600 ' key={index} onClick={() =>filter(item)}>{item}</button>
       })}
         
     </div>

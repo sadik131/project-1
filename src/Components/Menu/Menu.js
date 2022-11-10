@@ -10,7 +10,6 @@ export default function Menu() {
   const filterItem = (category) =>{
     const newitem = data.filter(item=>item.category == category)
     setMenu(newitem)
-    console.log(setMenu)
 
     if(category === "all"){
       setMenu(data)

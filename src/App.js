@@ -1,5 +1,6 @@
 import React from "react";
 import Birthday from "./Components/Birthday/Birthday";
+import Colors from "./Components/ColorsGenerator/Colors";
 import Experiences from "./Components/Experience/Experiences";
 import LoremGenerator from "./Components/Lorem Genarator/LoremGenerator";
 import Menu from "./Components/Menu/Menu";
@@ -19,6 +20,7 @@ function App() {
       <Menu></Menu>
       <Experiences></Experiences>
       <LoremGenerator></LoremGenerator>
+      <Colors></Colors>
     </div>
   );
 }

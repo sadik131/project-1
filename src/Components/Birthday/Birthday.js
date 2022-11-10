@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, {  useState } from 'react'
 import data from "../../data"
 
 export default function Birthday() {
@@ -20,8 +20,11 @@ export default function Birthday() {
                         </div>
                     })
                 }
-                <button onClick={()=>setBirthday([])} className='btn mt-3 bg-purple-400 
+                {birthday.length ? <button onClick={() => setBirthday([])} className='btn mt-3 bg-purple-400 
                 hover:bg-purple-500 border-none'>clear all</button>
+            :
+            <h1 className='text-xl text-center'>Don't have any data</h1>
+            }
             </div>
         </div>
     )

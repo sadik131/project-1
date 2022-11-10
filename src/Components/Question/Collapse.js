@@ -9,7 +9,7 @@ export default function Collapse({ question }) {
         <div key={id} className="card shadow-xl flex bg-base-100 m-10 p-7">
             <div className='flex'>
                 <h1 className='w-[90%]'>{title}</h1>
-                <button onClick={() => setCollapse(!collapse)} className='w-[5%]'>
+                <button onClick={() => setCollapse(!collapse)} className='w-[5%] outline-none'>
                     {collapse ?
                         <AiFillMinusCircle className='text-[#dd1c56] w-8 h-6' />
                         :
