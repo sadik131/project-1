@@ -6,7 +6,6 @@ import { ImQuotesRight } from 'react-icons/im';
 
 export default function Reviews() {
     const [index, setIndex] = useState(0)
-    console.log(index)
 
     if (index >= data.length) {
         return setIndex(0)

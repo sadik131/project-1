@@ -11,7 +11,7 @@ export default function Birthday() {
                 <h1 className='text-xl'>Total Birthday {birthday.length}</h1>
                 {
                     birthday.map(user => {
-                        return <div className='flex mt-3'>
+                        return <div key={user.id} className='flex mt-3'>
                             <img className='w-14 object-cover rounded-[100%] ' src={user.image} alt="" />
                             <div className='ml-4'>
                                 <h1 className='text-xl font-semibold'>{user.name}</h1>
