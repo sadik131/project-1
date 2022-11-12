@@ -5,6 +5,10 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    colo:{
+      denger:"#de356d",
+      primery:"#198754"
+    }
   },
    plugins: [require("daisyui")],
 }
