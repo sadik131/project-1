@@ -3,6 +3,7 @@ import { GiHamburgerMenu } from "react-icons/gi"
 import { useGlobalContex } from './Contex'
 import Model from './Model'
 import Sidebar from './Sidebar'
+import { motion } from 'framer-motion'
 
 
 export default function SidebarModel() {
@@ -16,7 +17,9 @@ export default function SidebarModel() {
                     isOpenSidebar && <Sidebar></Sidebar>
                 }
                 <div>
-                    <button onClick={() => setIsOpenModel(!isOpenModel)} className='btn absolute top-1/2 right-1/2 flex'>Open Model</button>
+                    <motion.button 
+                    whileHover={{scale:1.1}}
+                    onClick={() => setIsOpenModel(!isOpenModel)} className='btn absolute top-1/2 right-1/2 flex'>Open Model</motion.button>
                     {
                         isOpenModel && <Model></Model>
                     }

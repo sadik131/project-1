@@ -2,20 +2,20 @@ import React, { useState } from 'react'
 import data from "./data"
 
 export default function LoremGenerator() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(1)
   const [text, setText] = useState([])
-
+  
   // console.log(text)
   const handelFromSubmit = (e) => {
     e.preventDefault()
     setText(data)
+
     let number = Number(count)
     
-    // if(number <= 0){
-    //   console.log(number = 1)
-    // }
-    const texts = text.slice(0, number)
-    console.log(texts)
+    if(number <= 0){
+      number = 1
+    }
+    const texts = text.slice(1 , number)
     setText(texts)
   }
 

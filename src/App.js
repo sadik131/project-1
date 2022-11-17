@@ -16,9 +16,7 @@ import Tours from "./Components/tours/Tours";
 function App() {
   return (
     <div className=''>
-      {/* <Pages></Pages> */}
       <SidebarModel></SidebarModel>
-      {/* 
       <Navbar></Navbar>
       <Birthday></Birthday>
       <Tours></Tours>
@@ -29,7 +27,6 @@ function App() {
       <LoremGenerator></LoremGenerator>
       <Colors></Colors> 
       <Grocery></Grocery>
-      */}
     </div>
   );
 }

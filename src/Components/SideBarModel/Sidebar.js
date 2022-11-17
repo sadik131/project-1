@@ -2,12 +2,17 @@ import React from 'react'
 import { links, social } from './Data'
 import { GrFormClose } from 'react-icons/gr';
 import { useGlobalContex } from './Contex';
+import { motion } from "framer-motion"
 
 export default function Sidebar() {
   const { setIsOpenSidebar, isOpenSidebar } = useGlobalContex()
 
   return (
-    <div className='bg-white absolute z-10 top-0 delay-1000 w-96 h-full'>
+    <motion.div
+      initial={{ opacity: 0, x: -200 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration:.3 ,delay: 0.2 }}
+      className='bg-white absolute z-10 top-0 w-96 h-full'>
       <GrFormClose onClick={() => setIsOpenSidebar(!isOpenSidebar)} className='text-2xl ml-auto mr-2 mt-2' />
       {
         links.map(item => {
@@ -15,7 +20,7 @@ export default function Sidebar() {
           return <div key={id}>
             <ul className='mt-3'>
               <li>
-                <a className='text-xl m-2 flex hover:bg-blue-300 rounded-xl py-1 duration-1000  items-center' href={url}>{icon}<span className='ml-2'>{text}</span></a>
+                <a className='text-xl m-2 flex hover:bg-blue-300 rounded-xl py-1 items-center' href={url}>{icon}<span className='ml-2'>{text}</span></a>
               </li>
             </ul>
           </div>
@@ -33,6 +38,6 @@ export default function Sidebar() {
           })
         }
       </div>
-    </div>
+    </motion.div>
   )
 }

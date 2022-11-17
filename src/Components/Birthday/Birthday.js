@@ -1,5 +1,6 @@
 import React, {  useState } from 'react'
 import data from "../../data"
+import { motion } from 'framer-motion'
 
 export default function Birthday() {
 
@@ -7,7 +8,11 @@ export default function Birthday() {
 
     return (
         <div className='flex justify-center items-center h-screen bg-slate-300'>
-            <div className="card w-96 bg-base-100 shadow-2xl p-5">
+            <motion.div 
+            initial={{x:"-100vw"}}
+            animate={{x:0}}
+            transition={{delay:0.2 ,duration:0.5 , type:'spring'}}
+            className="card w-96 bg-base-100 shadow-2xl p-5">
                 <h1 className='text-xl'>Total Birthday {birthday.length}</h1>
                 {
                     birthday.map(user => {
@@ -25,7 +30,7 @@ export default function Birthday() {
             :
             <h1 className='text-xl text-center'>Don't have any data</h1>
             }
-            </div>
+            </motion.div>
         </div>
     )
 }
